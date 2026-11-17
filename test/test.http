@@ -16,3 +16,5 @@ GET http://localhost:8080/api/cats
 ###
 GET http://localhost:8080/api/cats/226d09e2-8a9a-4631-b08c-d118af08c687
 
+###
+DELETE http://localhost:8080/api/cats/226d09e2-8a9a-4631-b08c-d118af08c687
