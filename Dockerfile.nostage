@@ -1,0 +1,16 @@
+# ---------- Build en une seule étape (non-staged) ----------
+# On compile ET on exécute dans la même image golang
+FROM golang:1.25-alpine
+
+WORKDIR /app
+
+COPY go.mod go.sum ./
+RUN go mod download
+
+COPY . .
+
+RUN CGO_ENABLED=0 go build -o /backend .
+
+EXPOSE 8080
+
+CMD ["/backend"]

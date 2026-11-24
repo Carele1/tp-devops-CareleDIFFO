@@ -4,3 +4,7 @@ test
 README.md
 Dockerfile
 .dockerignore
+Dockerfile.nostage
+tp-tests.txt
+coverage.out
+coverage.html
