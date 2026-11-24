@@ -1,0 +1,9 @@
+# Tests unitaires (avec couverture de code)
+go test -v -cover .
+
+# Rapport de couverture HTML
+go test -coverprofile="coverage.out" .
+go tool cover -html="coverage.out" -o coverage.html
+
+# Tests d'API (le serveur doit tourner en arrière-plan : go run .)
+go test -v -count=1 ./test/apitests
